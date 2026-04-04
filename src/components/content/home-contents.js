@@ -32,7 +32,7 @@ const homeContent1Left = {
         tagName: "img",
         tailwindClass: "text-[70px] fon-sans font-bold tracking-tight text-[#b2301f] my-3",
         attr: {
-            src: "images/svg/about_me_banner_800x800.svg",
+            src: "images/sections/welcome.png",
             alt: "Présentation",
         }
     },
@@ -150,7 +150,7 @@ const homeContent2Right = {
         tagName: "img",
         tailwindClass: "text-[70px] fon-sans font-bold tracking-tight text-[#b2301f] my-3",
         attr: {
-            src: "images/advantage.png",
+            src: "images/sections/welcome.png",
             alt: "Avantages",
         }
     },
@@ -170,7 +170,7 @@ const homeContent3Left = {
         tagName: "img",
         tailwindClass: "text-[70px] fon-sans font-bold tracking-tight text-[#b2301f] my-3",
         attr: {
-            src: "images/presentation.png",
+            src: "images/sections/welcome.png",
             alt: "Présentation",
         }
     },
