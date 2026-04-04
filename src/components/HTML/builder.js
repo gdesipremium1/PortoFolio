@@ -34,10 +34,19 @@ export class HTML_Builder {
             const HTML = document.createElement(this.#htmlData.get("datHTML").tagName);
             (this.#htmlData.get("datHTML").textContent !== undefined) ? HTML.textContent = this.#htmlData.get("datHTML").textContent : null;
             (this.#htmlData.get("datHTML").tailwindClass !== undefined) ? HTML.className = this.#htmlData.get("datHTML").tailwindClass : null;
-            (this.#htmlData.get("datHTML").childHTML !== undefined) ? HTML.innerHTML  += this.#htmlData.get("datHTML").childHTML : null;
+            (this.#htmlData.get("datHTML").childHTML !== undefined) ? HTML.innerHTML += this.#htmlData.get("datHTML").childHTML : null;
             if (this.#htmlData.get("datHTML").attr !== undefined) {
-                Object.entries(this.#htmlData.get("datHTML").attr).forEach(([key,value])=>{
-                    (this.#listeAssetesAttr.has(key))? HTML.setAttribute(key, `${__ASSETS_PATH__}` + value) : HTML.setAttribute(key,  value);
+                Object.entries(this.#htmlData.get("datHTML").attr).forEach(([key, value]) => {
+                    if (
+                        this.#htmlData.get("datHTML").tagName === 'img' &&
+                        this.#htmlData.get("datHTML").attr === "src"
+                    ) {
+                        HTML.src = import.meta.env.BASE_URL + value;
+                        console.log(import.meta.env.BASE_URL);
+                    } else {
+                        (this.#listeAssetesAttr.has(key)) ? HTML.setAttribute(key, value) : HTML.setAttribute(key, value);
+                    }
+
                 });
             }
 
