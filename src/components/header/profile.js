@@ -4,16 +4,16 @@ const headerProfileDatas = {
     imageProfile: {
         tagName: "img",
         textContent: undefined,
-        tailwindClass: "rounded-r-full size-[12vw]",
+        tailwindClass: "rounded-r-full size-[12vw] cursor-pointer",
         attr: {
-            src: `${__ASSETS_PATH__}/images/profile.png`,
+            src: "/images/profile.png",
             alt: "WordPress & WooCommerc, JS & Python developer",
         }
     },
     nameProfile: {
         tagName: "div",
         childHTML: '<span class="text-xl font-semibold">Fetraniaina Désiré</span><br><span class="text-2xl font-bold">RABEMANANTSOA</span>',
-        tailwindClass: "text-[#35205f]",
+        tailwindClass: "text-[#35205f]  cursor-pointer hover:text-[#b2301f]",
         attr: {
         }
     }

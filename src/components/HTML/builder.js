@@ -18,6 +18,9 @@
 export class HTML_Builder {
     #htmlData = new Map();
     #currentHTML;
+    #listeAssetesAttr = new Set([
+        'src'
+    ]);
     constructor(datas) {
         this.#htmlData.set("datHTML", datas);
         this.#buildNow();
@@ -34,7 +37,7 @@ export class HTML_Builder {
             (this.#htmlData.get("datHTML").childHTML !== undefined) ? HTML.innerHTML  += this.#htmlData.get("datHTML").childHTML : null;
             if (this.#htmlData.get("datHTML").attr !== undefined) {
                 Object.entries(this.#htmlData.get("datHTML").attr).forEach(([key,value])=>{
-                    HTML.setAttribute(key, value);
+                    (this.#listeAssetesAttr.has(key))? HTML.setAttribute(key, `${__ASSETS_PATH__}` + value) : HTML.setAttribute(key,  value);
                 });
             }
 
