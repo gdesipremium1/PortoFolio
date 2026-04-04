@@ -37,16 +37,7 @@ export class HTML_Builder {
             (this.#htmlData.get("datHTML").childHTML !== undefined) ? HTML.innerHTML += this.#htmlData.get("datHTML").childHTML : null;
             if (this.#htmlData.get("datHTML").attr !== undefined) {
                 Object.entries(this.#htmlData.get("datHTML").attr).forEach(([key, value]) => {
-                    if (
-                        this.#htmlData.get("datHTML").tagName === 'img' &&
-                        this.#htmlData.get("datHTML").attr === "src"
-                    ) {
-                        HTML.src = import.meta.env.BASE_URL + value;
-                        console.log(import.meta.env.BASE_URL);
-                    } else {
-                        (this.#listeAssetesAttr.has(key)) ? HTML.setAttribute(key, value) : HTML.setAttribute(key, value);
-                    }
-
+                    (this.#listeAssetesAttr.has(key)) ? HTML.setAttribute(key, import.meta.env.BASE_URL + value) : HTML.setAttribute(key, value);
                 });
             }
 

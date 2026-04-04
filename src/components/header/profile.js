@@ -6,7 +6,7 @@ const headerProfileDatas = {
         textContent: undefined,
         tailwindClass: "rounded-r-full size-[12vw] cursor-pointer",
         attr: {
-            src: "/images/profile.png",
+            src: "images/profile.png",
             alt: "WordPress & WooCommerc, JS & Python developer",
         }
     },
