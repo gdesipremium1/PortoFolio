@@ -19,14 +19,14 @@ export default function App() {
     {
       title: "Web APP",
       description: "Cross-platform mobile application for tracking workouts, nutrition, and fitness goals with real-time analytics.",
-      image: "/images/capabilitys/app-web.png",
+      image: "images/capabilitys/app-web.png",
       tags: ["JS", "PHP", "API"],
       icon: AlignHorizontalJustifyEndIcon
     },
     {
       title: "Website & specific features",
       description: "Complete design system including logo, typography, color palette, and brand guidelines for a tech startup.",
-      image: "/images/capabilitys/digital-brand.png",
+      image: "images/capabilitys/digital-brand.png",
       tags: ["CMS", "Specific plugins&extensions"],
       icon: PenTool
     }
@@ -53,7 +53,7 @@ export default function App() {
           <div className="flex justify-between items-center h-16">
             <a href="#" className="font-bold text-x flex items-center gap-1">
               <ImageWithFallback
-                  src="/images/profile.png"
+                  src="images/profile.png"
                   alt="Workspace"
                   className="size-12 rounded-full"
                 />
@@ -139,7 +139,7 @@ export default function App() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="/images/welcome.png"
+                  src="images/welcome.png"
                   alt="Workspace"
                   className="w-full h-full object-cover"
                 />
