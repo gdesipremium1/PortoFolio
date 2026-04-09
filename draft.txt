@@ -1,9 +1,0 @@
-job@planificoapp.com:
-
-Dev débrouillard React TypeScript
-
-il sagit d'une plateforme quebecoise spécialisée dans la gestion des effectifs (workforce management)
-
-Gere pointage des emplyers (punsh)
-créer et optimiser les horaire de travail
-centraliser leur operation RH dans une solution simple
