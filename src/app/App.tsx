@@ -12,7 +12,7 @@ export default function App() {
     {
       title: "E-Commerce Platform",
       description: "A full-featured online shopping platform with product management, cart functionality, and secure checkout.",
-      image: "/images/capabilitys/e-commerce.png",
+      image: "images/capabilitys/e-commerce.png",
       tags: ["WordPress", "WooCommerc", "More..."],
       icon: Code
     },
