@@ -31,55 +31,55 @@ function PortofolioSwiper() {
       >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cuisinealouer.png"
+            src="images/refs/cuisinealouer.png"
             alt="https://cuisinealouer.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cuisinealouer.png"
+            src="images/refs/cuisinealouer.png"
             alt="https://cuisinealouer.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/billet-doux.png"
+            src="images/refs/billet-doux.png"
             alt="https://billetdoux.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/canebier.png"
+            src="images/refs/canebier.png"
             alt="https://lescanebiers.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/lapiscine-paris.png"
+            src="images/refs/lapiscine-paris.png"
             alt="https://www.lapiscine-paris.fr/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/retro-design.png"
+            src="images/refs/retro-design.png"
             alt="https://www.retro-design.fr/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/moto-dif.png"
+            src="images/refs/moto-dif.png"
             alt="https://www.motodiffusion.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cibesmed.png"
+            src="images/refs/cibesmed.png"
             alt="https://www.cibesmed.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/ecf.png"
+            src="images/refs/ecf.png"
             alt="https://www.ecf-echoppe.com/"
           />
         </SwiperSlide >
@@ -95,55 +95,55 @@ function PortofolioSwiper() {
       >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cuisinealouer.png"
+            src="images/refs/cuisinealouer.png"
             alt="https://cuisinealouer.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cuisinealouer.png"
+            src="images/refs/cuisinealouer.png"
             alt="https://cuisinealouer.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/billet-doux.png"
+            src="images/refs/billet-doux.png"
             alt="https://billetdoux.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/canebier.png"
+            src="images/refs/canebier.png"
             alt="https://lescanebiers.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/lapiscine-paris.png"
+            src="images/refs/lapiscine-paris.png"
             alt="https://www.lapiscine-paris.fr/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/retro-design.png"
+            src="images/refs/retro-design.png"
             alt="https://www.retro-design.fr/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/moto-dif.png"
+            src="images/refs/moto-dif.png"
             alt="https://www.motodiffusion.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/cibesmed.png"
+            src="images/refs/cibesmed.png"
             alt="https://www.cibesmed.com/"
           />
         </SwiperSlide >
         <SwiperSlide>
           <ImageWithFallback
-            src="/images/refs/ecf.png"
+            src="images/refs/ecf.png"
             alt="https://www.ecf-echoppe.com/"
           />
         </SwiperSlide >
