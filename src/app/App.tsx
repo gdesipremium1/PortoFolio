@@ -5,11 +5,12 @@ import LanguageSwitcher from './components/translate/LanguageSwitcher';
 import { useTranslation } from "react-i18next";
 import PortofolioSwiper from './components/swiper/ThumbsGallery';
 import ContactButton from './components/popup/ContactInfos';
+import FloatingCVButton from './components/cv/Float';
 import './components/swiper/style.css';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const projects = [
     {
@@ -92,6 +93,8 @@ export default function App() {
           </div>
         )}
       </nav>
+      {/* CV */}
+      <FloatingCVButton />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
