@@ -14,7 +14,7 @@ function ContactButton({ isHeroSection }: { isHeroSection?: boolean }) {
                                                                                           className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition  cursor-pointer"
                                                                            >
                                                                                           <Smartphone size={20} />
-                                                                                          View Phone Number
+                                                                                          Phone
                                                                            </button>
                                                             )
                                              }

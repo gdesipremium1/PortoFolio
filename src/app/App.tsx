@@ -1,31 +1,28 @@
 import { useState } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Palette, Smartphone, AlignHorizontalJustifyEndIcon, PenTool } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
+import LanguageSwitcher from './components/translate/LanguageSwitcher';
+import { useTranslation } from "react-i18next";
 import PortofolioSwiper from './components/swiper/ThumbsGallery';
 import ContactButton from './components/popup/ContactInfos';
-import './components/swiper/style.css'
+import './components/swiper/style.css';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const projects = [
     {
-      title: "Plateforme E-Commerce",
-      description: "Réalisation de plateformes et boutiques e-commerce, Des fonctionnalitées comme: gestions de produit, suivie client, gestion des commande jusq'aux payements et livraison",
       image: "images/capabilitys/e-commerce.png",
       tags: ["WordPress", "WooCommerc", "More..."],
       icon: Code
     },
     {
-      title: "Application Web",
-      description: "Applications de gestion, analyse et realisation des fonctionnalitées sur mésure, Gestions des données entreprise et décision stratégique.",
       image: "images/capabilitys/app-web.png",
       tags: ["JS", "PHP", "API"],
       icon: AlignHorizontalJustifyEndIcon
     },
     {
-      title: "Site Web & présence digitale",
-      description: "Suivie des charte de designe, Création de site fluide, Réfférencement naturel, Optimisations des pages selon les normes requises",
       image: "images/capabilitys/digital-brand.png",
       tags: ["CMS", "Designe", "optimisations"],
       icon: PenTool
@@ -63,11 +60,12 @@ export default function App() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">Apropos</button>
-              <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">Capacitées</button>
-              <button onClick={() => scrollToSection('works')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">Quelques travaux</button>
-              <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">Compétences sup</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">Contacts</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">{t("menu_1")}</button>
+              <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">{t("menu_2")}</button>
+              <button onClick={() => scrollToSection('works')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">{t("menu_3")}</button>
+              <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">{t("menu_4")}</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900 transition cursor-pointer">{t("menu_5")}</button>
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
@@ -84,10 +82,11 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-1">
-              <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">About</button>
-              <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">Projects</button>
-              <button onClick={() => scrollToSection('skills')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">Skills</button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">Contact</button>
+              <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_1")}</button>
+              <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_2")}</button>
+              <button onClick={() => scrollToSection('works')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_3")}</button>
+              <button onClick={() => scrollToSection('skills')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_4")}</button>
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_5")}</button>
             </div>
           </div>
         )}
@@ -99,23 +98,21 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl mb-6 text-gray-900">
-                Je suis <span className="text-blue-600">Fetraniaina Désiré RABEMANANTSOA</span>
-                <p className="text-xl text-gray-600 mb-8 mt-8">
-                  Un développeur Full-stack, Application Web, Site Vitrine & E-COMMERCE avec une forte capacité dans le domaine des produits digitals
-                </p>
+                {t("moi")} <span className="text-blue-600">Fetraniaina Désiré RABEMANANTSOA</span>
+                <p className="text-xl text-gray-600 mb-8 mt-8">{t("poste")}</p>
               </h2>
               <div className="flex gap-4">
                 <button
                   onClick={() => scrollToSection('projects')}
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                 >
-                  Mes capacitées
+                  {t("btncapacite")}
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
                 >
-                  Restons en contact
+                  {t("btncontact")}
                 </button>
               </div>
               <div className="flex gap-4 mt-8">
@@ -152,17 +149,17 @@ export default function App() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl mb-12 text-center text-gray-900">Apropos de moi</h2>
+          <h2 className="text-4xl mb-12 text-center text-gray-900">{t("titre2")}</h2>
           <div className="max-w-3xl mx-auto">
             <h1>
               <p className="text-lg text-gray-700 mb-6">
-                Fort de plus de cinq années d’expérience dans le développement web, j’ai construit une expertise solide autour de JavaScript, Python/Django et WordPress avec WooCommerce. Cette polyvalence me permet de concevoir aussi bien des applications modernes et performantes que des solutions e‑commerce robustes. Mon parcours m’a amené à travailler sur des projets variés, allant du site vitrine au système complet intégrant des bases de données et des fonctionnalités avancées.
+                {t("desc2_1")}
               </p>
               <p className="text-lg text-gray-700 mb-6">
-               J’ai eu l’opportunité de collaborer avec des équipes et des clients issus de différents pays, ce qui m’a permis de développer une réelle aisance dans la communication en français et en anglais. Cette ouverture internationale m’a appris à m’adapter aux contextes culturels et aux méthodes de travail diverses, tout en gardant une approche structurée et orientée résultats. Je privilégie la transparence et l’efficacité dans mes échanges, afin de garantir une collaboration fluide et productive.
+                {t("desc2_2")}
               </p>
               <p className="text-lg text-gray-700">
-                Je m’appuie sur des outils et pratiques modernes pour assurer la qualité et la fiabilité de mes projets: versionning, scrum, CI/CD sns...
+                {t("desc2_3")}
               </p>
             </h1>
           </div>
@@ -172,14 +169,13 @@ export default function App() {
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl mb-12 text-center text-gray-900">Compétences en Plus</h2>
+          <h2 className="text-4xl mb-12 text-center text-gray-900">{t("titre3")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition group">
                 <div className="relative h-48 overflow-hidden">
                   <ImageWithFallback
                     src={project.image}
-                    alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
                   />
                   <div className="absolute top-4 right-4 bg-white p-2 rounded-lg shadow-md">
@@ -187,8 +183,8 @@ export default function App() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl mb-2 text-gray-900">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl mb-2 text-gray-900">{t("sous_titre3_" + index)}</h3>
+                  <p className="text-gray-600 mb-4">{t("desc3_" + index)}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => (
                       <span key={tagIndex} className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
@@ -197,7 +193,7 @@ export default function App() {
                     ))}
                   </div>
                   <a href="#works" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700">
-                    View Project <ExternalLink size={16} />
+                    {t("btn3_" + index)} <ExternalLink size={16} />
                   </a>
                 </div>
               </div>
@@ -208,8 +204,8 @@ export default function App() {
       {/* Realizations */}
       <section id="works" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl mb-12 text-center text-gray-900">Quelques Travaux</h2>
-          <p className="mb-12 text-center">Des Produits digitaux, une trace de mes travaux réalisées entant que salarier, sous-tratant ou freelance indépendant.</p>
+          <h2 className="text-4xl mb-12 text-center text-gray-900">{t("titre4")}</h2>
+          <p className="mb-12 text-center">{t("desc4_1")}</p>
           <div id="work-swipe">
             <PortofolioSwiper />
           </div>
@@ -218,7 +214,7 @@ export default function App() {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl mb-12 text-center text-gray-900">Outils & Technologies</h2>
+          <h2 className="text-4xl mb-12 text-center text-gray-900">{t("titre5")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skills.map((skillGroup, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md">
@@ -240,9 +236,9 @@ export default function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl mb-6 text-gray-900">Travaillons ensemble</h2>
+          <h2 className="text-4xl mb-6 text-gray-900">{t("titre6")}</h2>
           <p className="text-xl text-gray-600 mb-8">
-            A la recherche de collaboration pour exprimer mes Compétences.
+            {t("desc6_1")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -250,7 +246,7 @@ export default function App() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
             >
               <Mail size={20} />
-              Envoie Un Email
+              {t("btn6_1")}
             </a>
             <a
               target='__blank__'
@@ -258,7 +254,7 @@ export default function App() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition"
             >
               <Github size={20} />
-              Mon GitHub
+              {t("btn6_2")}
             </a>
             <ContactButton isHeroSection={false} />
           </div>
@@ -272,7 +268,7 @@ export default function App() {
             <li>fetraniainadesirerabemanantsoa@gmail.com</li>
             <li> +261332992692, +261347104338</li>
           </ul>
-          <p className="text-gray-400">© 2026 Fetraniaina Désiré RABEMANANTSOA. Tous droits réservés.</p>
+          <p className="text-gray-400">{t("copyright")}</p>
         </div>
       </footer>
       {/* Alert contact */}
