@@ -22,13 +22,13 @@ export default function FloatingCVButton() {
 
      return (
           <>
-               <div className="fixed left-0 top-1/5 transform -translate-y-1/5 z-50  cursor-pointer">
+               <div className="fixed left-0 top-1/5 transform -translate-y-1/5 z-50">
                     {i18n.language === "fr" ? (
                          <button
                               onClick={() =>
                                    handleDownload("files/CVs/CV-Desire-2026-FR.pdf", "CV_RABEMANANTSOA.pdf")
                               }
-                              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-r-lg shadow-lg hover:bg-blue-800 transition"
+                              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-r-lg shadow-lg hover:bg-blue-800 transition cursor-pointer"
                          >
                               Télécharger Mon CV <File/>
                          </button>
@@ -37,7 +37,7 @@ export default function FloatingCVButton() {
                               onClick={() =>
                                    handleDownload("files/CVs/RESUME-Desire-2026-EN.pdf", "RESUME_RABEMANANTSOA.pdf")
                               }
-                              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-r-lg shadow-lg hover:bg-blue-800 transition"
+                              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-r-lg shadow-lg hover:bg-blue-800 transition cursor-pointer"
                          >
                               Download My Resume <File/>
                          </button>
