@@ -87,6 +87,7 @@ export default function App() {
               <button onClick={() => scrollToSection('works')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_3")}</button>
               <button onClick={() => scrollToSection('skills')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_4")}</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-gray-600 hover:bg-gray-50">{t("menu_5")}</button>
+              <LanguageSwitcher />
             </div>
           </div>
         )}
