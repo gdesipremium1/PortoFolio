@@ -21,7 +21,7 @@ export default function FloatingCVButton() {
 
      return (
           <>
-               <div className="fixed left-0 top-1/5 transform -translate-y-1/5">
+               <div className="fixed left-0 top-1/5 transform -translate-y-1/5 z-50">
                     {i18n.language === "fr" ? (
                          <button
                               onClick={() =>
