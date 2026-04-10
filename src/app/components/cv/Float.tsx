@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { File } from 'lucide-react';
+import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export default function FloatingCVButton() {
      const [loading, setLoading] = useState(false);
@@ -21,7 +22,7 @@ export default function FloatingCVButton() {
 
      return (
           <>
-               <div className="fixed left-0 top-1/5 transform -translate-y-1/5 z-50">
+               <div className="fixed left-0 top-1/5 transform -translate-y-1/5 z-50  cursor-pointer">
                     {i18n.language === "fr" ? (
                          <button
                               onClick={() =>
@@ -46,8 +47,8 @@ export default function FloatingCVButton() {
                {/* Popup transparent avec loader */}
                {loading && (
                     <div className="fixed inset-0 bg-transparent bg-opacity-50 flex items-center justify-center z-50">
-                         <img
-                              src="/images/loader.gif"
+                         <ImageWithFallback
+                              src="images/loader.gif"
                               alt="Chargement..."
                               className="w-25 h-25"
                          />
